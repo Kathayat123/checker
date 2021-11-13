@@ -6,7 +6,6 @@
 trigger:
   branches:
    - master
-   - feature/*
 pool:
   vmImage: 'windows-latest'
 
