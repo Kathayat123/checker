@@ -4,8 +4,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 schedules:
- - cron: "44 12 * * *"
-   displayName: M-F 3:00 AM (UTC + 5:30) India daily build
+ - cron: "50 12 * * 6"
+   displayName: Schedule trigger 12:50PM
    branches:
     include:
     - master
