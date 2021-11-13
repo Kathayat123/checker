@@ -5,12 +5,10 @@
 
 schedules:
  - cron: "0 13 * * *"
-   displayName: Schedule trigger 12:50PM
+   displayName: Schedule trigger 1PM
    branches:
     include:
-    - master
-    - feature/*
-   always: "True"
+    - /master/india/*
 pool:
   vmImage: 'windows-latest'
 
