@@ -4,12 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 schedules:
- - cron: "50 12 * * 6"
+ - cron: "0 13 * * *"
    displayName: Schedule trigger 12:50PM
    branches:
     include:
     - master
     - feature/*
+   always: "True"
 pool:
   vmImage: 'windows-latest'
 
