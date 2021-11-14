@@ -8,6 +8,11 @@ trigger:
  - master
 pool:
   vmImage: 'windows-latest'
+  variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
 steps:
 - script: echo "Hello Captain"
 - template: azure-pipelines-1.yml
