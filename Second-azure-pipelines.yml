@@ -3,16 +3,16 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
+    restoreSolution: '$(varkathayat.solution)'
 
 - task: VSBuild@1
   inputs:
-    solution: '$(solution)'
+    solution: '$(varkathayat.solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    platform: '$(varkathayat.buildPlatform)'
+    configuration: '$(varkathayat.buildConfiguration)'
 
 - task: VSTest@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    platform: '$(varkathayat.buildPlatform)'
+    configuration: '$(varkathayat.buildConfiguration)'
