@@ -5,9 +5,10 @@
 
 schedules:
  - cron: "45 12 * * *"
-     branches:
-      include:
-      - master
+   displayName: Schedule 12:55PM
+   branches:
+    include:
+    - master
 pool:
   vmImage: 'windows-latest'
 
